@@ -1,0 +1,33 @@
+# Möbius Strip 3D Model
+
+## 📌 Features
+- 3D mesh modeling of the Möbius strip using parametric equations.
+- Numerical computation of:
+  - Surface Area
+  - Edge Length
+- 3D visualization using Matplotlib.
+
+## 🧠 Parametric Equations Used
+x(u, v) = (R + v cos(u/2)) cos(u)  
+y(u, v) = (R + v cos(u/2)) sin(u)  
+z(u, v) = v sin(u/2)  
+with u in [0, 2π], v in [-w/2, w/2]
+
+## 📊 Surface Area Approximation
+Using vector calculus:
+- Compute partial derivatives w.r.t `u` and `v`
+- Calculate the magnitude of the cross product of these vectors
+- Integrate over the parametric domain using Simpson's Rule.
+
+## 🔁 Edge Length
+- Construct boundary using v = ±w/2 at various `u` values.
+- Sum Euclidean distances between consecutive edge points.
+
+## 🧩 Challenges Faced
+- Ensuring numerical stability and smooth mesh with finite resolution.
+- Correct handling of parameter derivatives for accurate area estimation.
+
+## ▶️ How to Run
+```bash
+pip install -r requirements.txt
+python main.py
